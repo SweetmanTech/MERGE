@@ -1,13 +1,19 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.15;
 
-import "./lib/PuzzleDrop.sol";
+import "./lib/Drop.sol";
 import "./lib/AlbumMetadata.sol";
+import "./lib/FundsReceiver.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MERGE is AlbumMetadata, PuzzleDrop {
+contract MERGE is AlbumMetadata, Drop, FundsReceiver, Ownable {
     uint256 immutable MERGE_TTD = 58750000000000000000000;
 
-    constructor(string[] memory _musicMetadata) PuzzleDrop("The Merge", "SAD") {
+    constructor(string[] memory _musicMetadata, address payable _liquidSplit) 
+        Drop("The Merge", "SAD") 
+        FundsReceiver(_liquidSplit) 
+        Ownable() 
+    {
         setupAlbumMetadata(_musicMetadata);
     }
 
