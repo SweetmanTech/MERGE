@@ -4,17 +4,21 @@ pragma solidity ^0.8.15;
 import "./lib/Drop.sol";
 import "./lib/AlbumMetadata.sol";
 import "./lib/FundsReceiver.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MERGE is AlbumMetadata, Drop, FundsReceiver, Ownable {
+contract MERGE is AlbumMetadata, Drop, FundsReceiver {
+    /// @notice TTD of the Merge
     uint256 immutable MERGE_TTD = 58750000000000000000000;
 
-    constructor(string[] memory _musicMetadata, address payable _liquidSplit) 
-        Drop("The Merge", "SAD") 
-        FundsReceiver(_liquidSplit) 
-        Ownable() 
+    constructor(
+        uint64 _publicSaleStart,
+        string[] memory _musicMetadata,
+        address payable _liquidSplit
+    )
+        Drop("The Merge", "SAD", _publicSaleStart)
+        FundsReceiver(_liquidSplit)
+        AlbumMetadata(_musicMetadata)
     {
-        setupAlbumMetadata(_musicMetadata);
+        singlePrice = MERGE_TTD / 1000000;
     }
 
     /// @notice This allows the user to purchase a edition edition
@@ -26,25 +30,21 @@ contract MERGE is AlbumMetadata, Drop, FundsReceiver, Ownable {
         onlyValidPrice(singlePrice, _quantity)
         returns (uint256)
     {
-        uint256 firstMintedTokenId = _purchase(_quantity, 1);
+        _checkIfMerged();
+        uint256 firstMintedTokenId = _purchase(_quantity);
         return firstMintedTokenId;
     }
 
     /// @notice This allows the user to purchase a edition edition
     /// at the given price in the contract.
-    function _purchase(uint256 quantity, uint8 _songId)
-        internal
-        onlyValidSongId(_songId)
-        returns (uint256)
-    {
+    function _purchase(uint256 quantity) internal returns (uint256) {
         uint256 start = _nextTokenId();
         _mint(msg.sender, quantity);
-        _setSongURI(start, quantity, _songId);
 
         emit Sale({
             to: msg.sender,
             quantity: quantity,
-            pricePerToken: bundlePrice,
+            pricePerToken: singlePrice,
             firstPurchasedTokenId: start
         });
         return start;
@@ -63,9 +63,14 @@ contract MERGE is AlbumMetadata, Drop, FundsReceiver, Ownable {
         return songURI(songId);
     }
 
-    /// @notice Returns current song URI based on TheMergeTTD.
-    function currentSong() public view returns (uint8) {
-        return uint8(block.timestamp % songCount) + 1;
+    /// @notice Runs update on price / end time for first purchase post-merge.
+    function _checkIfMerged() internal {
+        if (isMerged()) {
+            uint256 preMergePrice = MERGE_TTD / 1000000;
+            if (singlePrice == preMergePrice) {
+                _activatePostMerge();
+            }
+        }
     }
 
     /// @notice Returns if the merge has occured.
@@ -75,10 +80,6 @@ contract MERGE is AlbumMetadata, Drop, FundsReceiver, Ownable {
 
     /// @notice Current price. Changes once the merge happens.
     function price() public view returns (uint256) {
-        if (!isMerged()) {
-            return MERGE_TTD / 1000000;
-        } else {
-            return 100000000000000000; //TODO: develop mechanism to set post-merge price
-        }
+        return singlePrice;
     }
 }

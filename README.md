@@ -12,21 +12,23 @@
 
 2. [Altair Hard Fork](https://opensea.io/assets/0x19b703f65aA7E1E775BD06c2aa0D0d08c80f1C45/4682)
 
-3. [The Kiln Testnet Merge](https://opensea.io/assets/0x19b703f65aA7E1E775BD06c2aa0D0d08c80f1C45/4822)
+3. [Rocket Pool](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/4696)
 
-4. [Shadow Forks](https://opensea.io/assets/0x19b703f65aA7E1E775BD06c2aa0D0d08c80f1C45/4861)
+4. [The Kiln Testnet Merge](https://opensea.io/assets/0x19b703f65aA7E1E775BD06c2aa0D0d08c80f1C45/4822)
 
-5. [Ropsten Trolls](https://opensea.io/assets/0x19b703f65aA7E1E775BD06c2aa0D0d08c80f1C45/4895)
+5. [Shadow Forks](https://opensea.io/assets/0x19b703f65aA7E1E775BD06c2aa0D0d08c80f1C45/4861)
 
-6. [8 Ropsten Test Net Merge](https://opensea.io/assets/0x19b703f65aA7E1E775BD06c2aa0D0d08c80f1C45/4907)
+6. [Ropsten Trolls](https://opensea.io/assets/0x19b703f65aA7E1E775BD06c2aa0D0d08c80f1C45/4895)
 
-7. [Ropsten Test Net Merge (part 2)](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/4908)
+7. [8 Ropsten Test Net Merge](https://opensea.io/assets/0x19b703f65aA7E1E775BD06c2aa0D0d08c80f1C45/4907)
 
-8. [The Sepolila Merge](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/4935)
+8. [Ropsten Test Net Merge (part 2)](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/4908)
 
-9. [Smash That Eth (Goerli Merge)](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/4971)
+9. [The Sepolila Merge](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/4935)
 
-10. [Stake From Home](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/4985)
+10. [Smash That Eth (Goerli Merge)](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/4971)
+
+11. [Stake From Home](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/4985)
 
 ### Metadata
 
@@ -34,21 +36,23 @@
 
 2. [Altair Hard Fork](https://ipfs.io/ipfs/Qmb9X7yBk5iKzgnS5pfAfReFT8FVaLcf7cJGxxUFWzRMyk/4682)
 
-3. [The Kiln Testnet Merge](https://ipfs.io/ipfs/bafkreigzvg4obfufz7jqndzx46wawhpyylbkhq5tjs265m3aiexkqwwxx4)
+3. [Rocket Pool](https://ipfs.io/ipfs/Qmb9X7yBk5iKzgnS5pfAfReFT8FVaLcf7cJGxxUFWzRMyk/4696)
 
-4. [Shadow Forks](https://ipfs.io/ipfs/bafkreibfelfqtfcrvctkyblepwj6ygba2w533kcdrjjffhqxzmth3bpaku)
+4. [The Kiln Testnet Merge](https://ipfs.io/ipfs/bafkreigzvg4obfufz7jqndzx46wawhpyylbkhq5tjs265m3aiexkqwwxx4)
 
-5. [Ropsten Trolls](https://ipfs.io/ipfs/bafkreibnuzzpcw76axvjywanys6suzn5grnyiqli4sy7pnyrfljtsw5tl4)
+5. [Shadow Forks](https://ipfs.io/ipfs/bafkreibfelfqtfcrvctkyblepwj6ygba2w533kcdrjjffhqxzmth3bpaku)
 
-6. [8 Ropsten Test Net Merge](https://ipfs.io/ipfs/bafkreihk62zn55rmitrlezckiq5ko3y67dsrusz4ul56mo2lbwrl2he7xu)
+6. [Ropsten Trolls](https://ipfs.io/ipfs/bafkreibnuzzpcw76axvjywanys6suzn5grnyiqli4sy7pnyrfljtsw5tl4)
 
-7. [Ropsten Test Net Merge (part 2)](https://ipfs.io/ipfs/bafkreiflpx76dfo4psu3wgtdxz3kkqynl4bi6tyhcp2tg46zpxvscg3dze)
+7. [8 Ropsten Test Net Merge](https://ipfs.io/ipfs/bafkreihk62zn55rmitrlezckiq5ko3y67dsrusz4ul56mo2lbwrl2he7xu)
 
-8. [The Sepolila Merge](https://ipfs.io/ipfs/bafkreidbrimk4l7r7ck2puj7dczyb2p6d6vqfcrjbrjl2dmcw6pazoo4dq)
+8. [Ropsten Test Net Merge (part 2)](https://ipfs.io/ipfs/bafkreiflpx76dfo4psu3wgtdxz3kkqynl4bi6tyhcp2tg46zpxvscg3dze)
 
-9. [Smash That Eth (Goerli Merge)](https://ipfs.io/ipfs/bafkreiarqh42viuebmiy7jjuzkrxilhuk3mog4vt3zpk4dygb7jgz67kxu)
+9. [The Sepolila Merge](https://ipfs.io/ipfs/bafkreidbrimk4l7r7ck2puj7dczyb2p6d6vqfcrjbrjl2dmcw6pazoo4dq)
 
-10. [Stake From Home](https://ipfs.io/ipfs/bafkreienmiicd4zpzxgvkhprmzbv5r5ssmr2k66r7misnuahroxubxh6im)
+10. [Smash That Eth (Goerli Merge)](https://ipfs.io/ipfs/bafkreiarqh42viuebmiy7jjuzkrxilhuk3mog4vt3zpk4dygb7jgz67kxu)
+
+11. [Stake From Home](https://ipfs.io/ipfs/bafkreienmiicd4zpzxgvkhprmzbv5r5ssmr2k66r7misnuahroxubxh6im)
 
 ### Metadata init string
 
@@ -58,6 +62,7 @@
 [
     "ipfs://Qmb9X7yBk5iKzgnS5pfAfReFT8FVaLcf7cJGxxUFWzRMyk/4522",
     "ipfs://Qmb9X7yBk5iKzgnS5pfAfReFT8FVaLcf7cJGxxUFWzRMyk/4682",
+    "ipfs://Qmb9X7yBk5iKzgnS5pfAfReFT8FVaLcf7cJGxxUFWzRMyk/4696",
     "ipfs://bafkreigzvg4obfufz7jqndzx46wawhpyylbkhq5tjs265m3aiexkqwwxx4",
     "ipfs://bafkreibfelfqtfcrvctkyblepwj6ygba2w533kcdrjjffhqxzmth3bpaku",
     "ipfs://bafkreibnuzzpcw76axvjywanys6suzn5grnyiqli4sy7pnyrfljtsw5tl4",

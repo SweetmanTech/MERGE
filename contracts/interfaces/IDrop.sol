@@ -9,7 +9,6 @@ interface IDrop {
         bool presaleActive;
         // Price for public sale
         uint256 publicSalePrice;
-        uint256 publicSaleBundlePrice;
         // Timed sale actions for public sale
         uint64 publicSaleStart;
         uint64 publicSaleEnd;
