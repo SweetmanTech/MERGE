@@ -77,9 +77,4 @@ contract MERGE is AlbumMetadata, Drop, FundsReceiver {
     function isMerged() public view returns (bool) {
         return block.difficulty > MERGE_TTD;
     }
-
-    /// @notice Current price. Changes once the merge happens.
-    function price() public view returns (uint256) {
-        return singlePrice;
-    }
 }

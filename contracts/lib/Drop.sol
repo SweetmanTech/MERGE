@@ -30,9 +30,9 @@ contract Drop is ERC721A, IDrop, Ownable {
         publicSaleEnd = _publicSaleStart + LENGTH_OF_SALE;
     }
 
-    /// @notice Returns the starting token ID.
-    function _startTokenId() internal pure override returns (uint256) {
-        return 1;
+    /// @notice Current price. Changes once the merge happens.
+    function price() public view returns (uint256) {
+        return singlePrice;
     }
 
     /// @notice Public sale active
@@ -51,6 +51,11 @@ contract Drop is ERC721A, IDrop, Ownable {
         }
 
         _;
+    }
+
+    /// @notice Returns the starting token ID.
+    function _startTokenId() internal pure override returns (uint256) {
+        return 1;
     }
 
     /// @notice Public sale active

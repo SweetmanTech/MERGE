@@ -4,8 +4,6 @@ pragma solidity ^0.8.15;
 contract AlbumMetadata {
     /// @notice mapping from songId to songMetadataURI
     string[] internal songURIs;
-    /// @notice number of songs in Album
-    uint8 public songCount;
 
     constructor(string[] memory _trackList) {
         songURIs = _trackList;
@@ -18,6 +16,6 @@ contract AlbumMetadata {
 
     /// @notice Returns current song URI based on TheMergeTTD.
     function currentSong() public view returns (uint8) {
-        return uint8(block.timestamp % songURIs.length) + 1;
+        return uint8(block.timestamp % songURIs.length);
     }
 }
