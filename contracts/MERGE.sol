@@ -7,9 +7,8 @@ import "./lib/FundsReceiver.sol";
 import "./lib/TheMerge.sol";
 
 contract MERGE is AlbumMetadata, Drop, FundsReceiver, TheMerge {
-    /// @notice TTD of the Merge
+    /// @notice total difficulty when ethereum transitions to proof-of-stake
     uint256 immutable MERGE_TTD = 58750000000000000000000;
-    uint256 immutable START_TTD = 58650000000000000000000;
 
     constructor(
         uint64 _publicSaleStart,
@@ -37,21 +36,6 @@ contract MERGE is AlbumMetadata, Drop, FundsReceiver, TheMerge {
         return firstMintedTokenId;
     }
 
-    /// @notice This allows the user to purchase a edition edition
-    /// at the given price in the contract.
-    function _purchase(uint256 quantity) internal returns (uint256) {
-        uint256 start = _nextTokenId();
-        _mint(msg.sender, quantity);
-
-        emit Sale({
-            to: msg.sender,
-            quantity: quantity,
-            pricePerToken: singlePrice,
-            firstPurchasedTokenId: start
-        });
-        return start;
-    }
-
     /// @notice Returns the Uniform Resource Identifier (URI) for `tokenId` token.
     function tokenURI(uint256 tokenId)
         public
@@ -69,7 +53,8 @@ contract MERGE is AlbumMetadata, Drop, FundsReceiver, TheMerge {
     function _checkIfMerged() internal {
         if (merged()) {
             uint256 preMergePrice = MERGE_TTD / 1000000;
-            if (singlePrice == preMergePrice) {
+            bool isFirstProofOfWorkPurchase = (singlePrice == preMergePrice);
+            if (isFirstProofOfWorkPurchase) {
                 _activatePostMerge();
             }
         }

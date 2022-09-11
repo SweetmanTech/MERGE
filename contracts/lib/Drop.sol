@@ -53,6 +53,21 @@ contract Drop is ERC721A, IDrop, Ownable {
         _;
     }
 
+    /// @notice This allows the user to purchase a edition edition
+    /// at the given price in the contract.
+    function _purchase(uint256 quantity) internal returns (uint256) {
+        uint256 start = _nextTokenId();
+        _mint(msg.sender, quantity);
+
+        emit Sale({
+            to: msg.sender,
+            quantity: quantity,
+            pricePerToken: singlePrice,
+            firstPurchasedTokenId: start
+        });
+        return start;
+    }
+
     /// @notice Returns the starting token ID.
     function _startTokenId() internal pure override returns (uint256) {
         return 1;
@@ -84,23 +99,23 @@ contract Drop is ERC721A, IDrop, Ownable {
             });
     }
 
-    /// @notice updates price / end time post-merge
+    /// @notice updates price & end time on first purchase with proof-of-stake
     function _activatePostMerge() internal {
-        _setPrice(block.number);
+        _setPrice(block.number * 10000000000);
         _setPublicSaleEnd(uint64(block.timestamp) + HALF_LENGTH_OF_SALE);
     }
 
-    /// @notice Used in case of special "MERGE" block number we want to set the price to.
+    /// @notice used in case of special "MERGE" block number we want to set the price to.
     function setPrice(uint256 _newWeiPrice) external onlyOwner {
         _setPrice(_newWeiPrice);
     }
 
-    /// @notice Updates Price.
+    /// @notice updates price.
     function _setPrice(uint256 _newWeiPrice) internal {
         singlePrice = _newWeiPrice;
     }
 
-    /// @notice Used in case of unforseen delays in the merge requiring change to endTime.
+    /// @notice used in case of unforseen delays in the merge requiring change to endTime.
     function setPublicSaleEnd(uint64 _publicSaleEnd)
         external
         onlyPublicSaleActive
@@ -109,7 +124,7 @@ contract Drop is ERC721A, IDrop, Ownable {
         _setPublicSaleEnd(_publicSaleEnd);
     }
 
-    /// @notice Updates PublicSaleEnd.
+    /// @notice updates publicSaleEnd.
     function _setPublicSaleEnd(uint64 _publicSaleEnd) internal {
         publicSaleEnd = _publicSaleEnd;
     }
