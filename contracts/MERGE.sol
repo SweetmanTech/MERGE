@@ -3,24 +3,21 @@ pragma solidity ^0.8.15;
 
 import "./lib/Drop.sol";
 import "./lib/AlbumMetadata.sol";
-import "./lib/LiquidSplits/LiquidSplit.sol";
+import "./lib/FundsReceiver.sol";
 import "./lib/TheMerge.sol";
 
-contract MERGE is AlbumMetadata, Drop, LiquidSplit, TheMerge {
+contract MERGE is AlbumMetadata, Drop, FundsReceiver, TheMerge {
     /// @notice total difficulty when ethereum transitions to proof-of-stake
     uint256 immutable MERGE_TTD = 58750000000000000000000;
 
     constructor(
         uint64 _publicSaleStart,
         string[] memory _musicMetadata,
-        address _coreDevs,
-        address _songaDAO,
-        address _nftContractAddress,
-        uint32[] memory _tokenIds
+        address payable _liquidSplit
     )
-        Drop("The Merge", "SAD", _publicSaleStart)
-        LiquidSplit(_coreDevs, _songaDAO, _nftContractAddress, _tokenIds)
         AlbumMetadata(_musicMetadata)
+        Drop("The Merge", "SAD", _publicSaleStart)
+        FundsReceiver(_liquidSplit)
     {
         singlePrice = MERGE_TTD / 1000000;
     }
