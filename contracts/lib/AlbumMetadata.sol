@@ -14,8 +14,8 @@ contract AlbumMetadata {
         return songURIs[_songId];
     }
 
-    /// @notice Returns current song URI based on TheMergeTTD.
+    /// @notice returns current song URI based on current block difficulty.
     function currentSong() public view returns (uint8) {
-        return uint8(block.timestamp % songURIs.length);
+        return uint8(block.difficulty % songURIs.length);
     }
 }
