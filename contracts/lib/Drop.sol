@@ -101,7 +101,9 @@ contract Drop is ERC721A, IDrop, Ownable {
 
     /// @notice updates price & end time on first purchase with proof-of-stake
     function _activatePostMerge() internal {
-        _setPrice(block.number * 10000000000);
+        /// @dev converts block.number ~0.155 ETH
+        uint256 scale = 10000000000;
+        _setPrice(block.number * scale);
         _setPublicSaleEnd(uint64(block.timestamp) + HALF_LENGTH_OF_SALE);
     }
 
