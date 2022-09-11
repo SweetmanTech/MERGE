@@ -14,6 +14,7 @@ contract Drop is ERC721A, IDrop, Ownable {
     uint64 public publicSaleEnd = 1692974064;
     /// @notice Initial length of sale.
     uint64 HALF_LENGTH_OF_SALE = 60 * 60 * 24 * 2;
+    /// @notice Half length of sale.
     uint64 LENGTH_OF_SALE = HALF_LENGTH_OF_SALE * 2;
 
     /// @notice Sale is inactive
