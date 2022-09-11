@@ -4,10 +4,12 @@ pragma solidity ^0.8.15;
 import "./lib/Drop.sol";
 import "./lib/AlbumMetadata.sol";
 import "./lib/FundsReceiver.sol";
+import "./lib/TheMerge.sol";
 
-contract MERGE is AlbumMetadata, Drop, FundsReceiver {
+contract MERGE is AlbumMetadata, Drop, FundsReceiver, TheMerge {
     /// @notice TTD of the Merge
     uint256 immutable MERGE_TTD = 58750000000000000000000;
+    uint256 immutable START_TTD = 58650000000000000000000;
 
     constructor(
         uint64 _publicSaleStart,
@@ -65,16 +67,11 @@ contract MERGE is AlbumMetadata, Drop, FundsReceiver {
 
     /// @notice Runs update on price / end time for first purchase post-merge.
     function _checkIfMerged() internal {
-        if (isMerged()) {
+        if (merged()) {
             uint256 preMergePrice = MERGE_TTD / 1000000;
             if (singlePrice == preMergePrice) {
                 _activatePostMerge();
             }
         }
-    }
-
-    /// @notice Returns if the merge has occured.
-    function isMerged() public view returns (bool) {
-        return block.difficulty > MERGE_TTD;
     }
 }
