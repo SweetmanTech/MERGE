@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.15;
 
-interface IPuzzleDrop {
+interface IDrop {
     /// @notice Return value for sales details to use with front-ends
     struct SaleDetails {
         // Synthesized status variables for sale and presale
@@ -9,7 +9,6 @@ interface IPuzzleDrop {
         bool presaleActive;
         // Price for public sale
         uint256 publicSalePrice;
-        uint256 publicSaleBundlePrice;
         // Timed sale actions for public sale
         uint64 publicSaleStart;
         uint64 publicSaleEnd;
