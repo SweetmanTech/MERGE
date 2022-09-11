@@ -49,7 +49,7 @@ contract MERGE is AlbumMetadata, Drop, FundsReceiver, TheMerge {
         return songURI(songId);
     }
 
-    /// @notice Runs update on price / end time for first purchase post-merge.
+    /// @notice updates price & end time for first proof-of-work purchase.
     function _checkIfMerged() internal {
         if (merged()) {
             uint256 preMergePrice = MERGE_TTD / 1000000;
