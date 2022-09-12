@@ -18,4 +18,11 @@ contract AlbumMetadata {
     function currentSong() public view returns (uint8) {
         return uint8(block.difficulty % songURIs.length);
     }
+
+    /// @notice contract metadata.
+    /// @dev follows OpenSea standard: https://docs.opensea.io/docs/contract-level-metadata
+    function contractURI() public pure returns (string memory) {
+        return
+            "ipfs://bafkreihjjojeo2iukuwfgarkhlq7toit3d2finolglgfi453t6szcledgq";
+    }
 }
