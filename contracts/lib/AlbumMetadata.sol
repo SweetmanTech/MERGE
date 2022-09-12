@@ -14,15 +14,15 @@ contract AlbumMetadata {
         return songURIs[_songId];
     }
 
-    /// @notice returns current song URI based on current block difficulty.
+    /// @notice returns current song URI based on current block timestamp.
     function currentSong() public view returns (uint8) {
-        return uint8(block.difficulty % songURIs.length);
+        return uint8(block.timestamp % songURIs.length);
     }
 
     /// @notice contract metadata.
     /// @dev follows OpenSea standard: https://docs.opensea.io/docs/contract-level-metadata
     function contractURI() public pure returns (string memory) {
         return
-            "ipfs://bafkreihjjojeo2iukuwfgarkhlq7toit3d2finolglgfi453t6szcledgq";
+            "ipfs://bafkreihxpyin5kuq4t6swxjzbxugviupperdtmyiimkzdrkco3neo5zq3y";
     }
 }
