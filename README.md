@@ -30,6 +30,8 @@
 
 11. [Stake From Home](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/4985)
 
+12. [Pandas Are Not Known For Running (The Merge)](https://opensea.io/assets/ethereum/0x19b703f65aa7e1e775bd06c2aa0d0d08c80f1c45/5006)
+
 ### Metadata
 
 1. [Lofi FolkSong About EIP 1559](https://ipfs.io/ipfs/Qmb9X7yBk5iKzgnS5pfAfReFT8FVaLcf7cJGxxUFWzRMyk/4522)
@@ -54,6 +56,8 @@
 
 11. [Stake From Home](https://ipfs.io/ipfs/bafkreienmiicd4zpzxgvkhprmzbv5r5ssmr2k66r7misnuahroxubxh6im)
 
+12. [Pandas Are Not Known For Running (The Merge)](https://ipfs.io/ipfs/bafkreifkt5ptd7hoiamcgsq5lg32zsggfqqfpejjtkzovbylmzqztyjdze)
+
 ### Metadata init string
 
 - for Sweets to use during deployment
@@ -70,7 +74,8 @@
     "ipfs://bafkreiflpx76dfo4psu3wgtdxz3kkqynl4bi6tyhcp2tg46zpxvscg3dze",
     "ipfs://bafkreidbrimk4l7r7ck2puj7dczyb2p6d6vqfcrjbrjl2dmcw6pazoo4dq",
     "ipfs://bafkreiarqh42viuebmiy7jjuzkrxilhuk3mog4vt3zpk4dygb7jgz67kxu",
-    "ipfs://bafkreienmiicd4zpzxgvkhprmzbv5r5ssmr2k66r7misnuahroxubxh6im"
+    "ipfs://bafkreienmiicd4zpzxgvkhprmzbv5r5ssmr2k66r7misnuahroxubxh6im",
+    "ipfs://bafkreifkt5ptd7hoiamcgsq5lg32zsggfqqfpejjtkzovbylmzqztyjdze"
 ]
 ```
 
