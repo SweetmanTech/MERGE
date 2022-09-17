@@ -2,7 +2,9 @@
 
 - the official album by [Song a Day](https://songaday.world/) Mann ([Jonathan Mann](https://twitter.com/songadaymann))
 
-<img width="1056" alt="Screen Shot 2022-08-29 at 11 16 00 AM" src="https://user-images.githubusercontent.com/23249402/187222295-37ad7fe4-193c-4535-91b3-2995e73666fe.png">
+
+<img width="1440" alt="Screen Shot 2022-09-17 at 5 13 34 PM" src="https://user-images.githubusercontent.com/23249402/190874925-f94e2aa3-88fe-4fcc-93c0-7b0880c9fa50.png">
+
 
 ### The Originals - SAD
 
