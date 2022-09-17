@@ -1,7 +1,7 @@
 # MERGE
 
 - the official album by [Song a Day](https://songaday.world/) Mann ([Jonathan Mann](https://twitter.com/songadaymann))
-- Liquid Splits: (make your own liquid split [here](https://thirdweb.com/sweetman.eth/LiquidSplit)
+- Liquid Splits (make your own liquid split [here](https://thirdweb.com/sweetman.eth/LiquidSplit))
 - Open Editions
 - PoW => PoS price change using `block.difficulty > 2**64` [EIP-4399](https://eips.ethereum.org/EIPS/eip-4399)
 
